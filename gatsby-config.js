@@ -1,3 +1,14 @@
 module.exports = {
-  plugins: [`gatsby-plugin-typography`]
+  siteMetadata: {
+    title: `Title from SiteMetadata`
+  },
+  plugins: [
+    `gatsby-plugin-emotion`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`
+      }
+    }
+  ]
 }
